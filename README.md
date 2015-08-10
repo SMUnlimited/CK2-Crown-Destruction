@@ -14,6 +14,7 @@ This mod was created to make it harder for empires and kingdoms to be maintained
 - If the empire has a smaller realm than 80 there is an increased chance for the faction to form and abolish the title on winning lower crown authority wars
 - If the kingdom has a smaller realm than 15 there is an increased chance for the faction to form and abolish the title on winning lower crown authority wars
 - People in your realm will join the faction even if its not a title they are ruled under. 
+- Pagans and nomads do not have crown authority so are unaffected by this mod.
 
 ## Configuration
 There is a configuration option to restrict hordes in the intrigue menu. This will reduce the troop counts of hordes and scale better to the characters current army size. 
