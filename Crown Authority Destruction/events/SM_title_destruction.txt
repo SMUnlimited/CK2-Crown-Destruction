@@ -1,0 +1,102 @@
+namespace = SMKingdom
+
+narrative_event = {
+	id = SMKingdom.1
+	title = SMKingdom.1.title
+	desc = SMKingdom.1.desc
+	picture = GFX_evt_siege
+	border = GFX_event_narrative_frame_war
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = SMKingdom.1.option
+		trigger = {
+			character = ROOT
+		}
+	}
+	option = {
+		name = SMKingdom.1.option2
+		trigger = {
+			NOT= {
+				character = ROOT
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SMKingdom.2
+	title = SMKingdom.2.title
+	desc = SMKingdom.2.desc
+	picture = GFX_evt_siege
+	border = GFX_event_narrative_frame_war
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = SMKingdom.2.option
+		trigger = {
+			character = ROOT
+		}
+	}
+	option = {
+		name = SMKingdom.2.option2
+		trigger = {
+			NOT= {
+				character = ROOT
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SMKingdom.3
+	title = SMKingdom.1.title
+	desc = SMKingdom.1.CBdesc
+	picture = GFX_evt_siege
+	border = GFX_event_narrative_frame_war
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = SMKingdom.1.option
+		trigger = {
+			character = ROOT
+		}
+	}
+	option = {
+		name = SMKingdom.1.option2
+		trigger = {
+			NOT= {
+				character = ROOT
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SMKingdom.4
+	title = SMKingdom.2.title
+	desc = SMKingdom.2.CBdesc
+	picture = GFX_evt_siege
+	border = GFX_event_narrative_frame_war
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = SMKingdom.2.option
+		trigger = {
+			character = ROOT
+		}
+	}
+	option = {
+		name = SMKingdom.2.option2
+		trigger = {
+			NOT= {
+				character = ROOT
+			}
+		}
+	}
+}
+
