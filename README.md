@@ -21,6 +21,7 @@ This mod was created to make it harder for empires and kingdoms to be maintained
 ##Mod Compatability 
 This mod will conflict with mods that also modify the default vanilla factions. 
 
+##Credits
 - Inspiration for this mod (albiet a different approach) was based on ideas implemented in HIP/EMF, so credits to the team. 
 
 Works with ck2 version 2.4.2 "Provided for fun by The Strategy Master" 
