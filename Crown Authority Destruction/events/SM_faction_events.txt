@@ -93,13 +93,94 @@ letter_event = {
 			faction_SM_lower_crown_authority = { # The target (title) of the faction
 				if = {
 					limit = { has_law = crown_authority_0 }
-					destroy_landed_title = THIS
+					#any_de_jure_vassal = {
+					#	set_defacto_liege = THIS
+					#}
+					#destroy_landed_title = THIS
 					ROOT = {
 						prestige = -200
 					}
 					if = {
 						limit = {
 							tier = emperor
+						}
+						if = {
+							limit = {
+								ROOT = {
+									num_of_emperor_titles = 2
+								}
+							}
+							any_de_jure_vassal = {
+								set_defacto_liege = THIS
+							}
+							destroy_landed_title = THIS
+							add_claim = ROOT
+						}
+						if = {
+							limit = {
+								NOT = {
+									ROOT = {
+										num_of_emperor_titles = 2
+									}
+								}
+							}
+							destroy_landed_title = THIS
+							add_claim = ROOT
+							ROOT = {
+									primary_title = {
+										hidden_tooltip = {
+										create_title = {
+											tier = EMPEROR
+											landless = no
+											temporary = no
+											custom_created = yes
+											culture = ROOT
+											holder = ROOT
+											base_title = THIS
+											copy_title_laws = yes
+										}
+
+										
+											ROOT = {
+												primary_title = {
+													holder_scope = {
+														any_title_under = {
+															limit = {
+																tier = KING
+																empire = {
+																	has_holder = no
+																}
+															}
+															de_jure_liege = PREVPREV
+														}
+														any_title_under = {
+															limit = {
+																tier = DUKE
+																location = {
+																	kingdom = {
+																		empire = {
+																			has_holder = no
+																		}
+																		
+																		NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+																		ROOT = {
+																			completely_controls = PREV
+																		}
+																	}
+																}
+															}
+															location = {
+																kingdom = {
+																	de_jure_liege = PREVPREVPREVPREV
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+							}
 						}
 						FROM = {
 							narrative_event = { id = SMKingdom.1 }
@@ -108,6 +189,92 @@ letter_event = {
 					if = {
 						limit = {
 							tier = king
+						}
+						if = {
+							limit = {
+								ROOT = {
+									num_of_king_titles = 2
+								}
+							}
+							any_de_jure_vassal = {
+								set_defacto_liege = THIS
+							}
+							destroy_landed_title = THIS
+							add_claim = ROOT
+						}
+						if = {
+							limit = {
+								NOT = {
+									ROOT = {
+										num_of_king_titles = 2
+									}
+								}
+							}
+							# Create a custom kingdom title
+							destroy_landed_title = THIS
+							add_claim = ROOT
+							ROOT = {
+								primary_title = {
+									hidden_tooltip = {
+										create_title = {
+											tier = KING
+											landless = no
+											temporary = no
+											custom_created = yes
+											culture = ROOT
+											holder = ROOT
+											base_title = THIS
+											copy_title_laws = yes
+										}
+
+										empire = {
+											ROOT = {
+												primary_title = {
+													de_jure_liege = PREVPREV
+												}
+											}
+										}
+
+										ROOT = {
+											primary_title = {
+												holder_scope = {
+													any_title_under = {
+														limit = {
+															tier = DUKE
+															kingdom = {
+																has_holder = no
+															}
+														}
+														de_jure_liege = PREVPREV
+													}
+													any_title_under = {
+														limit = {
+															tier = COUNT
+															location = {
+																duchy = {
+																	kingdom = {
+																		has_holder = no
+																	}
+																	
+																	NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+																	ROOT = {
+																		completely_controls = PREV
+																	}
+																}
+															}
+														}
+														location = {
+															duchy = {
+																de_jure_liege = PREVPREVPREVPREV
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 						FROM = {
 							narrative_event = { id = SMKingdom.2 }
@@ -346,13 +513,94 @@ letter_event = {
 			crownlaw_title = {
 				if = {
 					limit = { has_law = crown_authority_0 }
-					destroy_landed_title = THIS
+					#any_de_jure_vassal = {
+					#	set_defacto_liege = THIS
+					#}
+					#destroy_landed_title = THIS
 					ROOT = {
 						prestige = -200
 					}
 					if = {
 						limit = {
 							tier = emperor
+						}
+						if = {
+							limit = {
+								ROOT = {
+									num_of_emperor_titles = 2
+								}
+							}
+							any_de_jure_vassal = {
+								set_defacto_liege = THIS
+							}
+							destroy_landed_title = THIS
+							add_claim = ROOT
+						}
+						if = {
+							limit = {
+								NOT = {
+									ROOT = {
+										num_of_emperor_titles = 2
+									}
+								}
+							}
+							destroy_landed_title = THIS
+							add_claim = ROOT
+							ROOT = {
+									primary_title = {
+										hidden_tooltip = {
+										create_title = {
+											tier = EMPEROR
+											landless = no
+											temporary = no
+											custom_created = yes
+											culture = ROOT
+											holder = ROOT
+											base_title = THIS
+											copy_title_laws = yes
+										}
+
+										
+											ROOT = {
+												primary_title = {
+													holder_scope = {
+														any_title_under = {
+															limit = {
+																tier = KING
+																empire = {
+																	has_holder = no
+																}
+															}
+															de_jure_liege = PREVPREV
+														}
+														any_title_under = {
+															limit = {
+																tier = DUKE
+																location = {
+																	kingdom = {
+																		empire = {
+																			has_holder = no
+																		}
+																		
+																		NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+																		ROOT = {
+																			completely_controls = PREV
+																		}
+																	}
+																}
+															}
+															location = {
+																kingdom = {
+																	de_jure_liege = PREVPREVPREVPREV
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+							}
 						}
 						FROM = {
 							narrative_event = { id = SMKingdom.1 }
@@ -361,6 +609,92 @@ letter_event = {
 					if = {
 						limit = {
 							tier = king
+						}
+						if = {
+							limit = {
+								ROOT = {
+									num_of_king_titles = 2
+								}
+							}
+							any_de_jure_vassal = {
+								set_defacto_liege = THIS
+							}
+							destroy_landed_title = THIS
+							add_claim = ROOT
+						}
+						if = {
+							limit = {
+								NOT = {
+									ROOT = {
+										num_of_king_titles = 2
+									}
+								}
+							}
+							# Create a custom kingdom title
+							destroy_landed_title = THIS
+							add_claim = ROOT
+							ROOT = {
+								primary_title = {
+									hidden_tooltip = {
+										create_title = {
+											tier = KING
+											landless = no
+											temporary = no
+											custom_created = yes
+											culture = ROOT
+											holder = ROOT
+											base_title = THIS
+											copy_title_laws = yes
+										}
+
+										empire = {
+											ROOT = {
+												primary_title = {
+													de_jure_liege = PREVPREV
+												}
+											}
+										}
+
+										ROOT = {
+											primary_title = {
+												holder_scope = {
+													any_title_under = {
+														limit = {
+															tier = DUKE
+															kingdom = {
+																has_holder = no
+															}
+														}
+														de_jure_liege = PREVPREV
+													}
+													any_title_under = {
+														limit = {
+															tier = COUNT
+															location = {
+																duchy = {
+																	kingdom = {
+																		has_holder = no
+																	}
+																	
+																	NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+																	ROOT = {
+																		completely_controls = PREV
+																	}
+																}
+															}
+														}
+														location = {
+															duchy = {
+																de_jure_liege = PREVPREVPREVPREV
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
 						}
 						FROM = {
 							narrative_event = { id = SMKingdom.2 }
