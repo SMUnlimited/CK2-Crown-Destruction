@@ -110,8 +110,10 @@ letter_event = {
 									num_of_emperor_titles = 2
 								}
 							}
-							any_de_jure_vassal = {
-								set_defacto_liege = THIS
+							hidden_tooltip = {
+								any_de_jure_vassal = {
+									set_defacto_liege = THIS
+								}
 							}
 							destroy_landed_title = THIS
 							add_claim = ROOT
@@ -126,12 +128,16 @@ letter_event = {
 							}
 							destroy_landed_title = THIS
 							add_claim = ROOT
-							ROOT = {
-								character_event = { id = SMKingdom.5 } 
+							hidden_tooltip = {
+								ROOT = {
+									character_event = { id = SMKingdom.5 } 
+								}
 							}
 						}
-						FROM = {
-							narrative_event = { id = SMKingdom.1 }
+						hidden_tooltip = {
+							FROM = {
+								narrative_event = { id = SMKingdom.1 }
+							}
 						}
 					}
 					if = {
@@ -144,8 +150,10 @@ letter_event = {
 									num_of_king_titles = 2
 								}
 							}
-							any_de_jure_vassal = {
-								set_defacto_liege = THIS
+							hidden_tooltip = {
+								any_de_jure_vassal = {
+									set_defacto_liege = THIS
+								}
 							}
 							destroy_landed_title = THIS
 							add_claim = ROOT
@@ -161,12 +169,16 @@ letter_event = {
 							# Create a custom kingdom title
 							destroy_landed_title = THIS
 							add_claim = ROOT
-							ROOT = {
-								character_event = { id = SMKingdom.6 } 
+							hidden_tooltip = {
+								ROOT = {
+									character_event = { id = SMKingdom.6 } 
+								}
 							}
 						}
-						FROM = {
-							narrative_event = { id = SMKingdom.2 }
+						hidden_tooltip = {
+							FROM = {
+								narrative_event = { id = SMKingdom.2 }
+							}
 						}
 					}
 				}
@@ -336,13 +348,14 @@ letter_event = {
 						modifier = {
 							factor = 2
 							higher_tier_than = DUKE
+							NOT = { higher_tier_than = KING }
 							ROOT = {
 								NOT = {realm_size = 20}
 							}
 						}
-						ROOT = {
-							set_character_flag = destroy_crown_title
-						}
+						#ROOT = {
+							set_title_flag = destroy_crown_title
+						#}
 					}
 				if = {
 					limit = {
@@ -419,8 +432,10 @@ letter_event = {
 									num_of_emperor_titles = 2
 								}
 							}
-							any_de_jure_vassal = {
-								set_defacto_liege = THIS
+							hidden_tooltip = {
+								any_de_jure_vassal = {
+									set_defacto_liege = THIS
+								}
 							}
 							destroy_landed_title = THIS
 							add_claim = ROOT
@@ -435,12 +450,16 @@ letter_event = {
 							}
 							destroy_landed_title = THIS
 							add_claim = ROOT
-							ROOT = {
-								character_event = { id = SMKingdom.5 } 
+								hidden_tooltip = {
+								ROOT = {
+									character_event = { id = SMKingdom.5 } 
+								}
 							}
 						}
-						FROM = {
-							narrative_event = { id = SMKingdom.1 }
+						hidden_tooltip = {
+							FROM = {
+								narrative_event = { id = SMKingdom.1 }
+							}
 						}
 					}
 					if = {
@@ -453,8 +472,10 @@ letter_event = {
 									num_of_king_titles = 2
 								}
 							}
-							any_de_jure_vassal = {
-								set_defacto_liege = THIS
+							hidden_tooltip = {
+								any_de_jure_vassal = {
+									set_defacto_liege = THIS
+								}
 							}
 							destroy_landed_title = THIS
 							add_claim = ROOT
@@ -470,12 +491,16 @@ letter_event = {
 							# Create a custom kingdom title
 							destroy_landed_title = THIS
 							add_claim = ROOT
-							ROOT = {
-								character_event = { id = SMKingdom.6 } 
+							hidden_tooltip = {
+								ROOT = {
+									character_event = { id = SMKingdom.6 } 
+								}
 							}
 						}
-						FROM = {
-							narrative_event = { id = SMKingdom.2 }
+						hidden_tooltip = {
+							FROM = {
+								narrative_event = { id = SMKingdom.2 }
+							}
 						}
 					}
 				}

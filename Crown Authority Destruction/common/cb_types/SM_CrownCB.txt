@@ -102,9 +102,9 @@ SM_lower_crown_authority_law = {
 			limit = {
 				OR = {
 					has_law = crown_authority_0
-					FROM = {
-						has_character_flag = destroy_crown_title
-					}
+					#FROM = {
+						has_title_flag = destroy_crown_title
+					#}
 				}
 			}
 			FROM = {
@@ -195,9 +195,9 @@ SM_lower_crown_authority_law = {
 		if = {
 			limit = {
 				NOT = {
-					FROM = {
-						has_character_flag = destroy_crown_title
-					}
+					#FROM = {
+						has_title_flag = destroy_crown_title
+					#}
 				}
 			}
 			if = {
@@ -217,9 +217,9 @@ SM_lower_crown_authority_law = {
 				add_law_w_cooldown = crown_authority_3
 			}
 		}
-		FROM = {
-			clr_character_flag = destroy_crown_title
-		}
+		#FROM = {
+			clr_title_flag = destroy_crown_title
+		#}
 	}
 
 	on_fail = {
@@ -230,7 +230,7 @@ SM_lower_crown_authority_law = {
 		any_defender = {
 			limit = { character = FROM }
 			participation_scaled_prestige = 50
-			clr_character_flag = destroy_crown_title
+			#clr_character_flag = destroy_crown_title
 		}
 		any_defender = {
 			limit = { NOT = { character = FROM } }
@@ -248,6 +248,10 @@ SM_lower_crown_authority_law = {
 			}
 		}
 		FROM = { hidden_tooltip = { disband_event_forces = faction_loyalists } }
+	}
+	
+	on_fail_title = {
+		clr_title_flag = destroy_crown_title
 	}
 
 	on_reverse_demand = {

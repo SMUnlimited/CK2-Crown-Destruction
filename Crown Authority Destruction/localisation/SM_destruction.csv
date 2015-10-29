@@ -1,14 +1,14 @@
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 SMKingdom.1.title;An Empire has fallen;;;;;;;;;;;;;x
-SMKingdom.1.desc;An Empire held by [From.GetTitledName] has fallen after the vassals lead by [Root.GetTitledName]  revolted and declared the title no longer has any authority or power over them;;;;;;;;;;;;;x
+SMKingdom.1.desc;The vassals lead by [Root.GetTitledName] have broken away from the empire and declared that [From.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
 SMKingdom.1.option;They will regret this!;;;;;;;;;;;;;x
 SMKingdom.1.option2;Interesting...;;;;;;;;;;;;;x
 SMKingdom.2.title;A Kingdom has fallen;;;;;;;;;;;;;x
-SMKingdom.2.desc;A Kingdom held by [From.GetTitledName] has fallen after the vassals lead by [Root.GetTitledName] revolted and declared the title no longer has any authority or power over them;;;;;;;;;;;;;x
+SMKingdom.2.desc;The vassals lead by [Root.GetTitledName] have broken away from the kingdom and declared that [From.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
 SMKingdom.2.option;They will regret this!;;;;;;;;;;;;;x
 SMKingdom.2.option2;Interesting...;;;;;;;;;;;;;x
-SMKingdom.1.CBdesc;An Empire held by [Root.GetTitledName] has fallen after the vassals lead by [From.GetTitledName]  revolted and declared the title no longer has any authority or power over them;;;;;;;;;;;;;x
-SMKingdom.2.CBdesc;A Kingdom held by [Root.GetTitledName] has fallen after the vassals lead by [From.GetTitledName] revolted and declared the title no longer has any authority or power over them;;;;;;;;;;;;;x
+SMKingdom.1.CBdesc;The vassals lead by [From.GetTitledName] have broken away from the empire and declared that [Root.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
+SMKingdom.2.CBdesc;The vassals lead by [From.GetTitledName] have broken away from the kingdom and declared that [Root.GetTitledName] no longer has any authority or power over them;;;;;;;;;;;;;x
 SM_lower_crown_authority_law_desc;§Y$CLAIMANT$§! can declare war to lower Crown Authority in the §Y$TITLE$§!;Le(la) §Y$CLAIMANT$§! peut déclarer la guerre pour affaiblir l’autorité de la Couronne du(de la) §Y$TITLE$§!;§Y$CLAIMANT$§! kann einen Krieg zur Reduzierung der Kronenautorität in §Y$TITLE$§! erklären;;§Y$CLAIMANT$§! puede declarar la guerra para reducir la autoridad de la Corona en el §Y$TITLE$§!;;;;;;;;;x
 SM_lower_crown_authority_title;Lower crown authority;;;;;;;;;;;;;x
 faction_SM_lower_crown_authority_short;Lower Crown Authority;Diminuer l'autorité de la couronne;Schwächere Kronenherrschaft;;Reducir la autoridad de la Corona;;;;;;;;;x
