@@ -100,3 +100,148 @@ narrative_event = {
 	}
 }
 
+# create empire title
+character_event = {
+	id = SMKingdom.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		ROOT = {
+			primary_title = {
+				hidden_tooltip = {
+				create_title = {
+					tier = EMPEROR
+					landless = no
+					temporary = no
+					custom_created = yes
+					culture = ROOT
+					holder = ROOT
+					base_title = THIS
+					copy_title_laws = yes
+				}
+
+				
+					ROOT = {
+						primary_title = {
+							holder_scope = {
+								any_title_under = {
+									limit = {
+										tier = KING
+										empire = {
+											has_holder = no
+										}
+									}
+									de_jure_liege = PREVPREV
+								}
+								any_title_under = {
+									limit = {
+										tier = DUKE
+										location = {
+											kingdom = {
+												empire = {
+													has_holder = no
+												}
+												
+												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+												ROOT = {
+													completely_controls = PREV
+												}
+											}
+										}
+									}
+									location = {
+										kingdom = {
+											de_jure_liege = PREVPREVPREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = SMKingdom.5.option
+	}
+}
+
+# create king title
+character_event = {
+	id = SMKingdom.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		ROOT = {
+			primary_title = {
+				hidden_tooltip = {
+					create_title = {
+						tier = KING
+						landless = no
+						temporary = no
+						custom_created = yes
+						culture = ROOT
+						holder = ROOT
+						base_title = THIS
+						copy_title_laws = yes
+					}
+
+					empire = {
+						ROOT = {
+							primary_title = {
+								de_jure_liege = PREVPREV
+							}
+						}
+					}
+
+					ROOT = {
+						primary_title = {
+							holder_scope = {
+								any_title_under = {
+									limit = {
+										tier = DUKE
+										kingdom = {
+											has_holder = no
+										}
+									}
+									de_jure_liege = PREVPREV
+								}
+								any_title_under = {
+									limit = {
+										tier = COUNT
+										location = {
+											duchy = {
+												kingdom = {
+													has_holder = no
+												}
+												
+												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
+												ROOT = {
+													completely_controls = PREV
+												}
+											}
+										}
+									}
+									location = {
+										duchy = {
+											de_jure_liege = PREVPREVPREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = SMKingdom.6.option
+	}
+}
+

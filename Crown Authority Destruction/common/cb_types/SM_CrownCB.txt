@@ -98,36 +98,15 @@ SM_lower_crown_authority_law = {
 	}
 
 	on_success_title = {
-		#if = {
-		#	limit = { has_law = crown_authority_0 }
-		#	destroy_landed_title = THIS
-		#}
-		if = {
-			limit = { has_law = crown_authority_1 }
-			add_law_w_cooldown = crown_authority_0
-		}
-		if = {
-			limit = { has_law = crown_authority_2 }
-			add_law_w_cooldown = crown_authority_1
-		}
-		if = {
-			limit = { has_law = crown_authority_3 }
-			add_law_w_cooldown = crown_authority_2
-		}
-		if = {
-			limit = { has_law = crown_authority_4 }
-			add_law_w_cooldown = crown_authority_3
-		}
 		if = {
 			limit = {
-				FROM = {
-					has_character_flag = destroy_crown_title
+				OR = {
+					has_law = crown_authority_0
+					FROM = {
+						has_character_flag = destroy_crown_title
+					}
 				}
 			}
-			#any_de_jure_vassal = {
-			#	set_defacto_liege = THIS
-			#}
-			#destroy_landed_title = THIS
 			FROM = {
 				prestige = -400
 			}
@@ -136,180 +115,106 @@ SM_lower_crown_authority_law = {
 					tier = emperor
 				}
 				if = {
-							limit = {
-								FROM = {
-									num_of_emperor_titles = 2
-								}
-							}
-							any_de_jure_vassal = {
-								set_defacto_liege = THIS
-							}
-							destroy_landed_title = THIS
-							add_claim = FROM
+					limit = {
+						FROM = {
+							num_of_emperor_titles = 2
 						}
-						if = {
-							limit = {
-								NOT = {
-									FROM = {
-										num_of_emperor_titles = 2
-									}
-								}
-							}
-							destroy_landed_title = THIS
-							add_claim = FROM
+					}
+					hidden_tooltip = {
+						any_de_jure_vassal = {
+							set_defacto_liege = THIS
+						}
+					}
+					destroy_landed_title = THIS
+					add_claim = FROM
+				}
+				if = {
+					limit = {
+						NOT = {
 							FROM = {
-									primary_title = {
-										
-										create_title = {
-											tier = EMPEROR
-											landless = no
-											temporary = no
-											custom_created = yes
-											culture = FROM
-											holder = FROM
-											base_title = THIS
-											copy_title_laws = yes
-										}
-
-										hidden_tooltip = {
-											FROM = {
-												primary_title = {
-													holder_scope = {
-														any_title_under = {
-															limit = {
-																tier = KING
-																empire = {
-																	has_holder = no
-																}
-															}
-															de_jure_liege = PREVPREV
-														}
-														any_title_under = {
-															limit = {
-																tier = DUKE
-																location = {
-																	kingdom = {
-																		empire = {
-																			has_holder = no
-																		}
-																		
-																		NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
-																		FROM = {
-																			completely_controls = PREV
-																		}
-																	}
-																}
-															}
-															location = {
-																kingdom = {
-																	de_jure_liege = PREVPREVPREVPREV
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
+								num_of_emperor_titles = 2
 							}
 						}
-				FROM = {
-					narrative_event = { id = SMKingdom.3 }
+					}
+					destroy_landed_title = THIS
+					add_claim = FROM
+					hidden_tooltip = {
+						FROM = {
+							character_event = { id = SMKingdom.5 } 
+						}
+					}
+				}
+				hidden_tooltip = {
+					FROM = {
+						narrative_event = { id = SMKingdom.3 }
+					}
 				}
 			}
 			if = {
 				limit = {
 					tier = king
 				}
-						if = {
-							limit = {
-								FROM = {
-									num_of_king_titles = 2
-								}
-							}
-							any_de_jure_vassal = {
-								set_defacto_liege = THIS
-							}
-							destroy_landed_title = THIS
-							add_claim = FROM
+				if = {
+					limit = {
+						FROM = {
+							num_of_king_titles = 2
 						}
-						if = {
-							limit = {
-								NOT = {
-									FROM = {
-										num_of_king_titles = 2
-									}
-								}
-							}
-							# Create a custom kingdom title
-							destroy_landed_title = THIS
-							add_claim = FROM
-							FROM = {
-								primary_title = {
-									create_title = {
-											tier = KING
-											landless = no
-											temporary = no
-											custom_created = yes
-											culture = FROM
-											holder = FROM
-											base_title = THIS
-											copy_title_laws = yes
-									}
-										
-									hidden_tooltip = {
-										empire = {
-											FROM = {
-												primary_title = {
-													de_jure_liege = PREVPREV
-												}
-											}
-										}
-
-										FROM = {
-											primary_title = {
-												holder_scope = {
-													any_title_under = {
-														limit = {
-															tier = DUKE
-															kingdom = {
-																has_holder = no
-															}
-														}
-														de_jure_liege = PREVPREV
-													}
-													any_title_under = {
-														limit = {
-															tier = COUNT
-															location = {
-																duchy = {
-																	kingdom = {
-																		has_holder = no
-																	}
-																	
-																	NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
-																	FROM = {
-																		completely_controls = PREV
-																	}
-																}
-															}
-														}
-														location = {
-															duchy = {
-																de_jure_liege = PREVPREVPREVPREV
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
+					}
+					hidden_tooltip = {
+						any_de_jure_vassal = {
+							set_defacto_liege = THIS
 						}
-				FROM = {
-					narrative_event = { id = SMKingdom.4 }
+					}
+					destroy_landed_title = THIS
+					add_claim = FROM
 				}
+				if = {
+					limit = {
+						NOT = {
+							FROM = {
+								num_of_king_titles = 2
+							}
+						}
+					}
+					# Create a custom kingdom title
+					destroy_landed_title = THIS
+					add_claim = FROM
+					hidden_tooltip = {
+						FROM = {
+							character_event = { id = SMKingdom.6 } 
+						}
+					}
+				}
+				hidden_tooltip = {
+					FROM = {
+						narrative_event = { id = SMKingdom.4 }
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					FROM = {
+						has_character_flag = destroy_crown_title
+					}
+				}
+			}
+			if = {
+				limit = { has_law = crown_authority_1 }
+				add_law_w_cooldown = crown_authority_0
+			}
+			if = {
+				limit = { has_law = crown_authority_2 }
+				add_law_w_cooldown = crown_authority_1
+			}
+			if = {
+				limit = { has_law = crown_authority_3 }
+				add_law_w_cooldown = crown_authority_2
+			}
+			if = {
+				limit = { has_law = crown_authority_4 }
+				add_law_w_cooldown = crown_authority_3
 			}
 		}
 		FROM = {
