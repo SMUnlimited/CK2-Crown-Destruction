@@ -110,9 +110,19 @@ letter_event = {
 									num_of_emperor_titles = 2
 								}
 							}
-							hidden_tooltip = {
-								any_de_jure_vassal = {
-									set_defacto_liege = THIS
+							custom_tooltip = {
+								text = SMFactionLoseVassals
+								hidden_tooltip = {
+									any_de_jure_vassal = {
+										if = {
+											limit = {
+												NOT = {
+													opinion = { who = ROOT value = 70 }
+												}
+											}
+											set_defacto_liege = THIS
+										}
+									}
 								}
 							}
 							destroy_landed_title = THIS
@@ -126,13 +136,50 @@ letter_event = {
 									}
 								}
 							}
-							destroy_landed_title = THIS
-							add_claim = ROOT
-							hidden_tooltip = {
-								ROOT = {
-									character_event = { id = SMKingdom.5 } 
+							custom_tooltip = {
+								text = SMFactionLoseVassals
+								hidden_tooltip = {
+									ROOT = {
+										if = {
+											limit = {
+												realm_size = 80
+											}
+											any_vassal = {
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
+											}
+										}
+									}
 								}
 							}
+							if = {
+								limit = {
+									ROOT = {
+										NOT = {
+											realm_size = 80
+										}
+									}
+								}
+								destroy_landed_title = THIS
+								hidden_tooltip = {
+									FROM = {
+										narrative_event = { id = SMKingdom.1 }
+									}
+								}
+							}
+							#destroy_landed_title = THIS
+							#add_claim = ROOT
+							#hidden_tooltip = {
+							#	ROOT = {
+							#		character_event = { id = SMKingdom.5 } 
+							#	}
+							#}
 						}
 						hidden_tooltip = {
 							FROM = {
@@ -150,9 +197,19 @@ letter_event = {
 									num_of_king_titles = 2
 								}
 							}
-							hidden_tooltip = {
-								any_de_jure_vassal = {
-									set_defacto_liege = THIS
+							custom_tooltip = {
+								text = SMFactionLoseVassals
+								hidden_tooltip = {
+									any_de_jure_vassal = {
+										if = {
+											limit = {
+												NOT = {
+													opinion = { who = ROOT value = 70 }
+												}
+											}
+											set_defacto_liege = THIS
+										}
+									}
 								}
 							}
 							destroy_landed_title = THIS
@@ -166,14 +223,51 @@ letter_event = {
 									}
 								}
 							}
-							# Create a custom kingdom title
-							destroy_landed_title = THIS
-							add_claim = ROOT
-							hidden_tooltip = {
-								ROOT = {
-									character_event = { id = SMKingdom.6 } 
+							custom_tooltip = {
+								text = SMFactionLoseVassals
+								hidden_tooltip = {
+									ROOT = {
+										if = {
+											limit = {
+												realm_size = 15
+											}
+											any_vassal = {
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
+											}
+										}
+									}
 								}
 							}
+							if = {
+								limit = {
+									ROOT = {
+										NOT = {
+											realm_size = 15
+										}
+									}
+								}
+								destroy_landed_title = THIS
+								hidden_tooltip = {
+									FROM = {
+										narrative_event = { id = SMKingdom.1 }
+									}
+								}
+							}
+							# Create a custom kingdom title
+							#destroy_landed_title = THIS
+							#add_claim = ROOT
+							#hidden_tooltip = {
+							#	ROOT = {
+							#		character_event = { id = SMKingdom.6 } 
+							#	}
+							#}
 						}
 						hidden_tooltip = {
 							FROM = {
@@ -353,9 +447,9 @@ letter_event = {
 								NOT = {realm_size = 20}
 							}
 						}
-						#ROOT = {
+						faction_SM_lower_crown_authority = {
 							set_title_flag = destroy_crown_title
-						#}
+						}
 					}
 				if = {
 					limit = {
@@ -432,9 +526,19 @@ letter_event = {
 									num_of_emperor_titles = 2
 								}
 							}
-							hidden_tooltip = {
-								any_de_jure_vassal = {
-									set_defacto_liege = THIS
+							custom_tooltip = {
+								text = SMFactionLoseVassals
+								hidden_tooltip = {
+									any_de_jure_vassal = {
+										if = {
+											limit = {
+												NOT = {
+													opinion = { who = ROOT value = 70 }
+												}
+											}
+											set_defacto_liege = THIS
+										}
+									}
 								}
 							}
 							destroy_landed_title = THIS
@@ -448,18 +552,50 @@ letter_event = {
 									}
 								}
 							}
-							destroy_landed_title = THIS
-							add_claim = ROOT
+							custom_tooltip = {
+								text = SMFactionLoseVassals
 								hidden_tooltip = {
-								ROOT = {
-									character_event = { id = SMKingdom.5 } 
+									ROOT = {
+										if = {
+											limit = {
+												realm_size = 80
+											}
+											any_vassal = {
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
+											}
+										}
+									}
 								}
 							}
-						}
-						hidden_tooltip = {
-							FROM = {
-								narrative_event = { id = SMKingdom.1 }
+							if = {
+								limit = {
+									ROOT = {
+										NOT = {
+											realm_size = 80
+										}
+									}
+								}
+								destroy_landed_title = THIS
+								hidden_tooltip = {
+									FROM = {
+										narrative_event = { id = SMKingdom.1 }
+									}
+								}
 							}
+							#destroy_landed_title = THIS
+							#add_claim = ROOT
+							#	hidden_tooltip = {
+							#	ROOT = {
+							#		character_event = { id = SMKingdom.5 } 
+							#	}
+							#}
 						}
 					}
 					if = {
@@ -472,9 +608,19 @@ letter_event = {
 									num_of_king_titles = 2
 								}
 							}
-							hidden_tooltip = {
-								any_de_jure_vassal = {
-									set_defacto_liege = THIS
+							custom_tooltip = {
+								text = SMFactionLoseVassals
+								hidden_tooltip = {
+									any_de_jure_vassal = {
+										if = {
+											limit = {
+												NOT = {
+													opinion = { who = ROOT value = 70 }
+												}
+											}
+											set_defacto_liege = THIS
+										}
+									}
 								}
 							}
 							destroy_landed_title = THIS
@@ -488,19 +634,51 @@ letter_event = {
 									}
 								}
 							}
-							# Create a custom kingdom title
-							destroy_landed_title = THIS
-							add_claim = ROOT
-							hidden_tooltip = {
-								ROOT = {
-									character_event = { id = SMKingdom.6 } 
+							custom_tooltip = {
+								text = SMFactionLoseVassals
+								hidden_tooltip = {
+									ROOT = {
+										if = {
+											limit = {
+												realm_size = 15
+											}
+											any_vassal = {
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
+											}
+										}
+									}
 								}
 							}
-						}
-						hidden_tooltip = {
-							FROM = {
-								narrative_event = { id = SMKingdom.2 }
+							if = {
+								limit = {
+									ROOT = {
+										NOT = {
+											realm_size = 15
+										}
+									}
+								}
+								destroy_landed_title = THIS
+								hidden_tooltip = {
+									FROM = {
+										narrative_event = { id = SMKingdom.1 }
+									}
+								}
 							}
+							# Create a custom kingdom title
+							#destroy_landed_title = THIS
+							#add_claim = ROOT
+							#hidden_tooltip = {
+							#	ROOT = {
+							#		character_event = { id = SMKingdom.6 } 
+							#	}
+							#}
 						}
 					}
 				}

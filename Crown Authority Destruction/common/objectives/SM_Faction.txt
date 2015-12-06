@@ -216,18 +216,23 @@ faction_SM_lower_crown_authority = {
 		# Smaller empires larger risk lowering crown authority
 		modifier = {
 			factor = 4
-					higher_tier_than = KING
-				LIEGE = {
+			higher_tier_than = KING
+			FROM = {
+				liege = {
 					NOT = {realm_size = 80}
 				}
+			}
 		}
 		
 		modifier = {
 			factor = 2
-					higher_tier_than = DUKE
-				LIEGE = {
+			higher_tier_than = DUKE
+			NOT = { higher_tier_than = KING }
+			FROM = {
+				liege = {
 					NOT = {realm_size = 15}
 				}
+			}
 		}
 		
 		modifier = {
@@ -419,7 +424,7 @@ faction_SM_lower_crown_authority = {
 				FROMFROM = {
 					higher_tier_than = KING
 				}
-				LIEGE = {
+				liege = {
 					NOT = {realm_size = 80}
 				}
 		}
@@ -428,8 +433,9 @@ faction_SM_lower_crown_authority = {
 			factor = 2
 				FROMFROM = {
 					higher_tier_than = DUKE
+					NOT = { higher_tier_than = KING }
 				}
-				LIEGE = {
+				liege = {
 					NOT = {realm_size = 15}
 				}
 		}

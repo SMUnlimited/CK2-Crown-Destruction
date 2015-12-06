@@ -245,3 +245,22 @@ character_event = {
 	}
 }
 
+character_event = {
+	id = SMKingdom.8
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+
+	}
+	
+	option = {
+		name = SMKingdom.8.option
+		ROOT = {
+				random = {
+					chance = 30
+					set_defacto_liege = THIS
+				}
+		}
+	}
+}

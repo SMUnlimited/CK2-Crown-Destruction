@@ -944,16 +944,6 @@ faction_succ_primogeniture = {
 		
 		modifier = {
 			factor = 0
-			liege = { 
-				NOT = { year = 1350 }
-				primary_title = { is_tribal_type_title = yes }
-				culture = ROOT
-				religion = ROOT
-			}
-		}
-		
-		modifier = {
-			factor = 0
 			has_opinion_modifier = {
 				who = LIEGE
 				modifier = opinion_coerced_into_leaving_faction
@@ -5512,7 +5502,7 @@ faction_overthrow = {
 		}
 
 		modifier = {
-			facotor = 0.01
+			factor = 0.01
 			FROM = {
 				liege = {
 					trait = strong
@@ -5733,7 +5723,7 @@ faction_overthrow = {
 		}
 
 		modifier = {
-			facotor = 0.01
+			factor = 0.01
 			FROM = {
 				liege = {
 					trait = strong
