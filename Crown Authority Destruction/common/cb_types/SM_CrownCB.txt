@@ -124,14 +124,23 @@ SM_lower_crown_authority_law = {
 								text = SMFactionLoseVassals
 								hidden_tooltip = {
 									any_de_jure_vassal = {
-										if = {
-											limit = {
-												NOT = {
-													opinion = { who = FROM value = 70 }
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = FROM value = 70 }
+														}
+														opinion = { who = FROM value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
 												}
-											}
-											set_defacto_liege = THIS
-										}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = FROM value = 1 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
 									}
 								}
 							}
@@ -159,6 +168,15 @@ SM_lower_crown_authority_law = {
 													limit = {
 														NOT = {
 															opinion = { who = FROM value = 70 }
+														}
+														opinion = { who = FROM value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
+												}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = FROM value = 1 }
 														}
 													}
 													set_defacto_liege = THIS
@@ -206,14 +224,23 @@ SM_lower_crown_authority_law = {
 								text = SMFactionLoseVassals
 								hidden_tooltip = {
 									any_de_jure_vassal = {
-										if = {
-											limit = {
-												NOT = {
-													opinion = { who = FROM value = 70 }
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = FROM value = 70 }
+														}
+														opinion = { who = FROM value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
 												}
-											}
-											set_defacto_liege = THIS
-										}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = FROM value = 1 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
 									}
 								}
 							}
@@ -241,6 +268,15 @@ SM_lower_crown_authority_law = {
 													limit = {
 														NOT = {
 															opinion = { who = FROM value = 70 }
+														}
+														opinion = { who = FROM value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
+												}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = FROM value = 1 }
 														}
 													}
 													set_defacto_liege = THIS

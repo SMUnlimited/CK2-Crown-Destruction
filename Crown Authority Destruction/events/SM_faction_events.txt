@@ -114,14 +114,23 @@ letter_event = {
 								text = SMFactionLoseVassals
 								hidden_tooltip = {
 									any_de_jure_vassal = {
-										if = {
-											limit = {
-												NOT = {
-													opinion = { who = ROOT value = 70 }
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
 												}
-											}
-											set_defacto_liege = THIS
-										}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
 									}
 								}
 							}
@@ -149,6 +158,15 @@ letter_event = {
 													limit = {
 														NOT = {
 															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
+												}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
 														}
 													}
 													set_defacto_liege = THIS
@@ -201,14 +219,23 @@ letter_event = {
 								text = SMFactionLoseVassals
 								hidden_tooltip = {
 									any_de_jure_vassal = {
-										if = {
-											limit = {
-												NOT = {
-													opinion = { who = ROOT value = 70 }
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
 												}
-											}
-											set_defacto_liege = THIS
-										}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
 									}
 								}
 							}
@@ -236,6 +263,15 @@ letter_event = {
 													limit = {
 														NOT = {
 															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
+												}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
 														}
 													}
 													set_defacto_liege = THIS
@@ -530,14 +566,23 @@ letter_event = {
 								text = SMFactionLoseVassals
 								hidden_tooltip = {
 									any_de_jure_vassal = {
-										if = {
-											limit = {
-												NOT = {
-													opinion = { who = ROOT value = 70 }
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
 												}
-											}
-											set_defacto_liege = THIS
-										}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
 									}
 								}
 							}
@@ -565,6 +610,15 @@ letter_event = {
 													limit = {
 														NOT = {
 															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
+												}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
 														}
 													}
 													set_defacto_liege = THIS
@@ -612,14 +666,23 @@ letter_event = {
 								text = SMFactionLoseVassals
 								hidden_tooltip = {
 									any_de_jure_vassal = {
-										if = {
-											limit = {
-												NOT = {
-													opinion = { who = ROOT value = 70 }
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
 												}
-											}
-											set_defacto_liege = THIS
-										}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
+														}
+													}
+													set_defacto_liege = THIS
+												}
 									}
 								}
 							}
@@ -647,6 +710,15 @@ letter_event = {
 													limit = {
 														NOT = {
 															opinion = { who = ROOT value = 70 }
+														}
+														opinion = { who = ROOT value = 1 }
+													}
+													character_event = { id = SMKingdom.8 } 
+												}
+												if = {
+													limit = {
+														NOT = {
+															opinion = { who = ROOT value = 1 }
 														}
 													}
 													set_defacto_liege = THIS

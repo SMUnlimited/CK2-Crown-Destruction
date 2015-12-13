@@ -254,13 +254,61 @@ character_event = {
 
 	}
 	
+	# Uses options to get around randomness seed not changing
+	
 	option = {
 		name = SMKingdom.8.option
-		ROOT = {
-				random = {
-					chance = 30
-					set_defacto_liege = THIS
-				}
+		# Do nothing
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = SMKingdom.8.option
+		set_defacto_liege = THIS 
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 4
+				tier = king # Increase chance for kings to break away
+			}
+			modifier = {
+				factor = 1
+				tier = duke
+			}
+			modifier = {
+				factor = 0.5
+				tier = count
+			}
+			modifier = {
+				factor = 0.01
+				tier = baron
+			}
+			modifier = {
+				factor = 4
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 3
+				trait = deceitful
+			}
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+			modifier = {
+				factor = 0.1
+				trait = imbecile
+			}
+			modifier = {
+				factor = 0.01
+				trait = content
+			}
 		}
 	}
 }
