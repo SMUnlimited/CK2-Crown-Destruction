@@ -274,7 +274,7 @@ character_event = {
 				tier = king # Increase chance for kings to break away
 			}
 			modifier = {
-				factor = 1
+				factor = 1.25
 				tier = duke
 			}
 			modifier = {
@@ -282,7 +282,7 @@ character_event = {
 				tier = count
 			}
 			modifier = {
-				factor = 0.01
+				factor = 0.05
 				tier = baron
 			}
 			modifier = {
